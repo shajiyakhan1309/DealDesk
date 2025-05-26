@@ -1,0 +1,93 @@
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+
+.nav {
+  gap: 2em;
+  background-color: #00296b;
+  height: 13vh;
+  width: 98%;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0 1em;
+  flex-wrap: wrap;
+}
+
+/* NavLink default styles */
+.nav a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  font-size: medium;
+  transition: all 0.3s ease;
+}
+
+/* On hover (inactive links): stay white */
+.nav a:hover {
+  color: white;
+}
+
+.nav h1{
+  color:white;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.nav h1:hover{
+  transform: scale(1.10);
+  transition: all 0.5s ease;
+  cursor: pointer;
+
+}
+
+
+/* Active NavLink */
+.nav a.orange {
+  background-color: #fdc500;
+  color: black;
+}
+
+/* Hovering over active link keeps it black */
+.nav a.orange:hover {
+  color: black;
+}
+
+/* List item styles (wrapped inside NavLink) */
+.nav li {
+  list-style: none;
+  cursor: pointer;
+}
+
+/* Dark mode icon */
+.material-symbols-outlined {
+  margin-left: auto;
+  cursor: pointer;
+  color: #fff;
+}
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+    padding: 1em;
+  }
+
+  .material-symbols-outlined {
+    margin-left:auto;
+    align-self: flex-end;
+  }
+
+  .nav a {
+    padding: 0.5rem;
+    width: 100%;
+  }
+}

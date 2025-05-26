@@ -1,0 +1,42 @@
+.footer {
+  padding: 1em 2em;
+  height: auto;
+  min-height: 8vh;
+  width: 100%;
+  background-color: #00296b;
+  position: relative; /* or fixed/absolute depending on layout */
+  bottom: 0;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  transition: all 0.5s ease;
+  box-sizing: border-box;
+}
+.footer p{
+  margin-top: 15px;
+}
+
+p{
+  margin-left: 15px;
+}
+
+/* Responsive font and padding adjustments */
+@media screen and (max-width: 768px) {
+  .footer {
+    font-size: 0.9rem;
+    padding: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    font-size: 0.8rem;
+    padding: 0.75em;
+    flex-direction: column;
+    text-align: center;
+  }
+}

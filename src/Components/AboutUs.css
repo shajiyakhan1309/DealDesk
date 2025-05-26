@@ -1,0 +1,54 @@
+.about-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff5e6;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .about-title {
+    color: #ff6d00;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .features-box {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+  }
+  
+  .features-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .features-list li {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+  }
+  
+  .why-box {
+    background: #e6f4ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+  }
+
+  .about-container {
+    animation: fadeIn 0.6s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  
+  .credit {
+    text-align: center;
+    margin-top: 2rem;
+    color: #666;
+  }

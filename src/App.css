@@ -1,0 +1,150 @@
+.Container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+/* Dark mode styles */
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+body.dark .Calculator {
+  border-color: white;
+}
+
+body.dark input {
+  border-color: white;
+  background-color: #222;
+  color: white;
+}
+
+body.dark .btn {
+  border-color: white;
+  background-color: #444;
+  color: white;
+}
+
+.container {
+  background-image: url(https://img.nbc.com/files/images/2019/5/31/Shark_Tank-Web-DynamicLead-Mobile-1114x891.jpg?impolicy=nbc_com&imwidth=1024&imdensity=1);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+  border-radius: 35px;
+  padding: 2em 1em;
+  box-sizing: border-box;
+}
+
+
+.calculator-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  max-width: 1200px;
+  padding: 2em;
+}
+
+
+/* Optional: Smooth transitions */
+body,
+.Calculator,
+input,
+.btn {
+  transition: all 0.3s ease;
+}
+
+.Calculator:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.Calculator {
+  height: 26em;
+  max-width: 450px;
+  border: 1px solid gray;
+  border-radius: 2em;
+  padding: 1.5em;
+  margin: 1em;
+  background-color: rgba(255, 255, 255, 0.392);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+input {
+  height: 3em;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin-top: 1em;
+  padding: 0 15px; /* Added padding for better text display */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.btn {
+  height: 40px;
+  width: 100px;
+  border-radius: 15px;
+  border: 1px solid gray;
+  cursor: pointer;
+  font-size: medium;
+  font-weight: bolder;
+  margin: 15px;
+  transition: all 0.3s ease; /* Added smooth hover effect */
+  background-color: rgba(236, 223, 223, 0.407);
+  border:1px solid gray;
+}
+
+.btn:hover {
+  transform: scale(1.05); /* Slight grow effect on hover */
+}
+
+.res {
+  margin: 10px;
+  font-size: 1.2em;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  .Calculator {
+    height: fit-content;
+    max-width: 90%;
+    padding: 1em;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  input {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 1em;
+    border-radius: 0;
+  }
+
+  .Calculator {
+    border-radius: 1em;
+    padding: 1em;
+  }
+
+  .btn {
+    font-size: 1em;
+  }
+
+  .res {
+    font-size: 1em;
+  }
+}

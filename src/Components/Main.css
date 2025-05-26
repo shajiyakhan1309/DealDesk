@@ -1,0 +1,87 @@
+.container1 {
+  position: relative;
+  overflow-x: auto;
+  margin: 10px;
+  width: 97%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.main::-webkit-scrollbar {
+  display: none; 
+}
+
+img {
+  border-radius: 80px;
+  flex: 0 0 96vw;
+  height: 85vh;
+  margin-left: 1em;
+  scroll-snap-align: start;
+  object-fit: fill;
+  transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+.arrow {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5em 0.7em;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  border-radius: 50%;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  img {
+    height: 50vh;
+    border-radius: 150px;
+    flex: 0 0 90vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  img {
+    height: 40vh;
+    border-radius: 100px;
+    flex: 0 0 88vw;
+    margin-left: 0.5em;
+  }
+}
