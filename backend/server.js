@@ -1,10 +1,11 @@
+import dotenv from 'dotenv';
 import express from "express"
 import cors from "cors"
 import bodyParser from "body-parser"
 import mongoose from "mongoose"
 import {User} from "./models/User.js"
-
-let conn=await mongoose.connect("mongodb://localhost:27017/users")
+dotenv.config();
+let conn=await mongoose.connect(process.env.MONGO_URI)
 const app = express()
 const port = 3000
 
