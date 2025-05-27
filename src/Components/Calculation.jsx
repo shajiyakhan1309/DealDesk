@@ -6,7 +6,7 @@ import RevenueCalculator from './RevenueCalculator';
 import ProfitCalculator from './ProfitCalculator';
 import LossCalculator from './LossCalculator';
 import ROI from './ROI';
-import Turnover from './turnover';
+import Turnover from './Turnover';
 import MarketShare from './MarketShare';
 
 const Calculation = () => {
