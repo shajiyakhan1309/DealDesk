@@ -36,7 +36,7 @@ const LossCalculator = () => {
             <h1>Loss</h1>
             <input
               type="number"
-              placeholder="      Total Expenses"
+              placeholder="Total Expenses"
               name="totalExpenses"
               value={lossForm.totalExpenses}
               onChange={lossHandleChange}
@@ -44,7 +44,7 @@ const LossCalculator = () => {
             <br />
             <input
               type="number"
-              placeholder="     Total Revenue"
+              placeholder="Total Revenue"
               name="totalRevenue"
               value={lossForm.totalRevenue}
               onChange={lossHandleChange}

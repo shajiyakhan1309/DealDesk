@@ -5,6 +5,7 @@
   align-items: center;
   padding: 1em;
 }
+
 /* Dark mode styles */
 body.dark {
   background-color: black;
@@ -34,12 +35,11 @@ body.dark .btn {
   background-size: cover;
   margin: 0 auto;
   height: auto;
-  width: 100%;
-  border-radius: 35px;
+  width: auto;
+  border-radius: 25px;
   padding: 2em 1em;
   box-sizing: border-box;
 }
-
 
 .calculator-grid {
   display: flex;
@@ -49,7 +49,6 @@ body.dark .btn {
   max-width: 1200px;
   padding: 2em;
 }
-
 
 /* Optional: Smooth transitions */
 body,
@@ -65,14 +64,13 @@ input,
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-
 .Calculator {
-  height: 26em;
+  height: 30em;
   max-width: 450px;
   border: 1px solid gray;
   border-radius: 2em;
   padding: 1.5em;
-  margin: 1em;
+  margin: 1em auto; /* center horizontally */
   background-color: rgba(255, 255, 255, 0.392);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -85,6 +83,14 @@ input {
   margin-top: 1em;
   padding: 0 15px; /* Added padding for better text display */
   box-sizing: border-box; /* Ensures padding doesn't affect width */
+  font-size: 1rem; /* Base font size for input text */
+}
+
+/* Placeholder styling */
+input::placeholder {
+  color: #666;
+  opacity: 1; /* keep placeholder fully visible */
+  font-size: 1rem;
 }
 
 .btn {
@@ -98,7 +104,7 @@ input {
   margin: 15px;
   transition: all 0.3s ease; /* Added smooth hover effect */
   background-color: rgba(236, 223, 223, 0.407);
-  border:1px solid gray;
+  border: 1px solid gray;
 }
 
 .btn:hover {
@@ -118,13 +124,19 @@ input {
     padding: 1em;
   }
 
+  input {
+    font-size: 1.1rem; /* Slightly bigger for smaller screens */
+    height: 3.2em;     /* Maintain or slightly increase height */
+    padding: 0 12px;
+  }
+
+  input::placeholder {
+    font-size: 1.1rem;
+  }
+
   .btn {
     width: 100%;
     margin: 10px 0;
-  }
-
-  input {
-    font-size: 1em;
   }
 }
 
@@ -132,12 +144,25 @@ input {
   .container {
     width: 100%;
     padding: 1em;
-    border-radius: 0;
+    border-radius: 25px;
   }
 
   .Calculator {
+    width: 100%;       /* full width */
+    max-width: none;   /* remove max-width limit */
     border-radius: 1em;
     padding: 1em;
+    margin: 1em auto;  /* center horizontally */
+  }
+
+  input {
+    font-size: 1rem; /* Maintain readable size */
+    height: 3em;
+    padding: 0 10px;
+  }
+
+  input::placeholder {
+    font-size: 1rem;
   }
 
   .btn {

@@ -2,12 +2,11 @@ body {
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-
 .nav {
   gap: 2em;
   background-color: #00296b;
-  height: 13vh;
-  width: 98%;
+  min-height: 100px;
+  width: 100%; /* ✅ Changed from 98% to full width */
   display: flex;
   align-items: center;
   position: sticky;
@@ -15,6 +14,8 @@ body {
   z-index: 1000;
   padding: 0 1em;
   flex-wrap: wrap;
+  justify-content: space-between; /* ✅ Prevents overflow */
+  box-sizing: border-box;
 }
 
 /* NavLink default styles */
@@ -33,32 +34,27 @@ body {
   color: white;
 }
 
-.nav h1{
-  color:white;
+.nav h1 {
+  color: white;
   font-weight: bolder;
   font-size: 30px;
 }
 
-.nav h1:hover{
+.nav h1:hover {
   transform: scale(1.10);
   transition: all 0.5s ease;
   cursor: pointer;
-
 }
-
 
 /* Active NavLink */
 .nav a.orange {
   background-color: #fdc500;
   color: black;
 }
-
-/* Hovering over active link keeps it black */
 .nav a.orange:hover {
   color: black;
 }
 
-/* List item styles (wrapped inside NavLink) */
 .nav li {
   list-style: none;
   cursor: pointer;
@@ -66,28 +62,63 @@ body {
 
 /* Dark mode icon */
 .material-symbols-outlined {
-  margin-left: auto;
   cursor: pointer;
   color: #fff;
+  font-size: 1.8rem;
+  margin-left: auto;
 }
 
+/* ✅ Wrapper for nav links to control layout */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-items: flex-start;
+}
 
-/* Responsive adjustments */
+/* -------------------- Responsive -------------------- */
+
 @media screen and (max-width: 768px) {
   .nav {
     flex-direction: column;
-    height: auto;
     align-items: flex-start;
     padding: 1em;
   }
 
-  .material-symbols-outlined {
-    margin-left:auto;
-    align-self: flex-end;
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1em;
   }
 
   .nav a {
     padding: 0.5rem;
     width: 100%;
   }
+
+.material-symbols-outlined {
+  align-self: flex-start; /* aligns the icon to start of cross-axis */
+  margin-left: 0;        /* remove any left margin */
+  margin-right: auto;    /* push icon fully to left */
+  cursor: pointer;
+  transition: all 0.3 ease;
 }
+
+}
+
+/* ✅ REMOVED broken width overrides */
+@media screen and (max-width: 478px) {
+  .nav {
+    /* Removed width: 170% to prevent overflow */
+    padding: 1em;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
+  .nav a {
+    width: 100%;
+  }
+}
+

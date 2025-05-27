@@ -38,7 +38,7 @@ const EquityCalculator = () => {
             <h1>Equity</h1>
             <input
               type="number"
-              placeholder="      Total Assets"
+              placeholder="Total Assets"
               name="TotalAssets"
               value={equityForm.TotalAssets}
               onChange={equityHandleChange}
@@ -46,7 +46,7 @@ const EquityCalculator = () => {
             <br />
             <input
               type="number"
-              placeholder="     Total Liabilities"
+              placeholder="Total Liabilities"
               name="TotalLiabilities"
               value={equityForm.TotalLiabilities}
               onChange={equityHandleChange}

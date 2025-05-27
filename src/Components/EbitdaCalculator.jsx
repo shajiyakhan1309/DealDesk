@@ -55,7 +55,7 @@ const EbitdaCalculator = () => {
             <h1>Ebitda</h1>
             <input
               type="number"
-              placeholder="     Net Income"
+              placeholder="Net Income"
               name="netIncome"
               value={ebitdaForm.netIncome}
               onChange={ebitdaHandleChange}
@@ -63,7 +63,7 @@ const EbitdaCalculator = () => {
             <br />
             <input
               type="number"
-              placeholder="     Interest"
+              placeholder="Interest"
               name="interest"
               value={ebitdaForm.interest}
               onChange={ebitdaHandleChange}
@@ -71,7 +71,7 @@ const EbitdaCalculator = () => {
             <br />
             <input
               type="number"
-              placeholder="     taxes"
+              placeholder="taxes"
               name="taxes"
               value={ebitdaForm.taxes}
               onChange={ebitdaHandleChange}
@@ -79,7 +79,7 @@ const EbitdaCalculator = () => {
             <br />
             <input
               type="number"
-              placeholder="     depreciation"
+              placeholder="depreciation"
               name="depreciation"
               value={ebitdaForm.depreciation}
               onChange={ebitdaHandleChange}
@@ -87,7 +87,7 @@ const EbitdaCalculator = () => {
             <br />
             <input
               type="number"
-              placeholder="     amortization"
+              placeholder="amortization"
               name="amortization"
               value={ebitdaForm.amortization}
               onChange={ebitdaHandleChange}

@@ -39,7 +39,7 @@ const MarketShare = () => {
              <h1>Market Share</h1>
              <input
                type="number"
-               placeholder="      Company Sales"
+               placeholder="Company Sales"
                name="companySales"
                value={marketForm.companySales}
                onChange={marketHandleChange}
@@ -47,7 +47,7 @@ const MarketShare = () => {
              <br />
              <input
                type="number"
-               placeholder="     Total Market Sales"
+               placeholder="Total Market Sales"
                name="totalMarketSales"
                value={marketForm.totalMarketSales}
                onChange={marketHandleChange}

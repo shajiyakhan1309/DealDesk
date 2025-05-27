@@ -38,7 +38,7 @@ const ROI = () => {
              <h1>Return on Investment</h1>
              <input
                type="number"
-               placeholder="      Net Profit"
+               placeholder="Net Profit"
                name="netProfit"
                value={roiForm.netProfit}
                onChange={roiHandleChange}
@@ -46,7 +46,7 @@ const ROI = () => {
              <br />
              <input
                type="number"
-               placeholder="     Cost of Investment"
+               placeholder="Cost of Investment"
                name="costOfInvestment"
                value={roiForm.costOfInvestment}
                onChange={roiHandleChange}

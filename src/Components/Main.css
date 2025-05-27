@@ -23,7 +23,7 @@
 }
 
 img {
-  border-radius: 80px;
+  border-radius: 50px;
   flex: 0 0 96vw;
   height: 85vh;
   margin-left: 1em;
@@ -48,6 +48,7 @@ img:hover {
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
+  border:none;
   border-radius: 50%;
   user-select: none;
   transition: background-color 0.3s ease;
@@ -72,15 +73,16 @@ img:hover {
 @media screen and (max-width: 768px) {
   img {
     height: 50vh;
-    border-radius: 150px;
+    border-radius: 50px;
     flex: 0 0 90vw;
+    
   }
 }
 
 @media screen and (max-width: 480px) {
   img {
     height: 40vh;
-    border-radius: 100px;
+    border-radius: 50px;
     flex: 0 0 88vw;
     margin-left: 0.5em;
   }

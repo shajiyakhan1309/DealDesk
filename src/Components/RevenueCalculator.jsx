@@ -34,7 +34,7 @@ const RevenueCalculator = () => {
             <h1>Revenue</h1>
             <input
               type="number"
-              placeholder="      Price"
+              placeholder="Price"
               name="Price"
               value={revenueForm.Price}
               onChange={revenueHandleChange}
@@ -42,7 +42,7 @@ const RevenueCalculator = () => {
             <br />
             <input
               type="number"
-              placeholder="     Quantity"
+              placeholder="Quantity"
               name="Quantity"
               value={revenueForm.Quantity}
               onChange={revenueHandleChange}

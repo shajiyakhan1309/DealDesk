@@ -49,7 +49,7 @@ const ContactSection = () => {
         </h2>
 
         <div className="contact-info">
-          <p>Have questions? We're here to help!</p>
+          <p>Have questions or suggestions. We're here to help!</p>
           <div className="contact-methods">
             <div className="contact-card">
               <h3>Email</h3>

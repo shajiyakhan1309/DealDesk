@@ -52,7 +52,7 @@ const Turnover = () => {
             <h1>Turnover</h1>
             <input
               type="number"
-              placeholder="    Total Sales"
+              placeholder="Total Sales"
               name="totalSales"
               value={turnoverForm.totalSales}
               onChange={turnoverHandleChange}
@@ -60,7 +60,7 @@ const Turnover = () => {
             <br />
             <input
               type="number"
-              placeholder="     Allowances"
+              placeholder="Allowances"
               name="Allowances"
               value={turnoverForm.Allowances}
               onChange={turnoverHandleChange}
@@ -68,7 +68,7 @@ const Turnover = () => {
             <br />
             <input
               type="number"
-              placeholder="     Returns"
+              placeholder="Returns"
               name="Returns"
               value={turnoverForm.Returns}
               onChange={turnoverHandleChange}
@@ -76,7 +76,7 @@ const Turnover = () => {
             <br />
             <input
               type="number"
-              placeholder="     Discounts"
+              placeholder="Discounts"
               name="Discounts"
               value={turnoverForm.Discounts}
               onChange={turnoverHandleChange}

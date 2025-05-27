@@ -5,11 +5,11 @@ const AboutSection = () => {
   return (
     <div className="about-container">
       <h2 className="about-title">
-        <span role="img" aria-label="calculator">🧮</span> About DealDeskk
+        <span role="img" aria-label="calculator">🧮</span> About DealDesk
       </h2>
 
       <p className="about-text">
-      DealDeskk is your simple tool for important business math. 
+      DealDesk is your simple tool for important business math. 
         Made with React to help everyone understand their finances better!
       </p>
 
