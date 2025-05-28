@@ -20,11 +20,11 @@ const Main = () => {
 
       <div className="main" ref={scrollRef}>
         <img src="Valuation.jpg" alt="Valuation info" />
-        <img src="Ebitda.jpg" alt="Ebitda info" />
+        <img src="EBITDA.jpg" alt="Ebitda info" />
         <img src="Equity.jpg" alt="Equity" />
-        <img src="Revenue.jpg" alt="Revenue" />
+        <img src="revenue.jpg" alt="Revenue" />
         <img src="Profit.jpg" alt="Profit" />
-        <img src="Loss.jpg" alt="Loss" />
+        <img src="loss.jpg" alt="Loss" />
         <img src="Turnover.jpg" alt="Turnover" />
         <img src="ROI.jpg" alt="ROI" />
         <img src="MarketShare.jpg" alt="MarketShare" />

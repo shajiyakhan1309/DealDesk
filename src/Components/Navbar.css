@@ -1,24 +1,33 @@
-body {
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
-
 .nav {
-  gap: 2em;
-  background-color: #00296b;
-  min-height: 100px;
-  width: 100%; /* ✅ Changed from 98% to full width */
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  background-color: #00296b;
+  min-height: 100px;
+  padding: 0 1em;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 0 1em;
-  flex-wrap: wrap;
-  justify-content: space-between; /* ✅ Prevents overflow */
-  box-sizing: border-box;
 }
 
-/* NavLink default styles */
+.nav h1 {
+  color: white;
+  font-weight: bolder;
+  font-size: 30px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
 .nav a {
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -29,96 +38,78 @@ body {
   transition: all 0.3s ease;
 }
 
-/* On hover (inactive links): stay white */
-.nav a:hover {
-  color: white;
-}
-
-.nav h1 {
-  color: white;
-  font-weight: bolder;
-  font-size: 30px;
-}
-
-.nav h1:hover {
-  transform: scale(1.10);
-  transition: all 0.5s ease;
-  cursor: pointer;
-}
-
-/* Active NavLink */
 .nav a.orange {
   background-color: #fdc500;
   color: black;
 }
-.nav a.orange:hover {
-  color: black;
-}
 
-.nav li {
-  list-style: none;
-  cursor: pointer;
-}
-
-/* Dark mode icon */
-.material-symbols-outlined {
-  cursor: pointer;
-  color: #fff;
-  font-size: 1.8rem;
-  margin-left: auto;
-}
-
-/* ✅ Wrapper for nav links to control layout */
-.nav-links {
+.nav-actions {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   gap: 1em;
-  align-items: flex-start;
+  flex-shrink: 0;
 }
 
-/* -------------------- Responsive -------------------- */
+.material-symbols-outlined {
+  margin-left: 15px;
+  cursor: pointer;
+  color: white;
+  font-size: 1.8rem;
+}
 
+/* Hamburger hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Responsive styles */
 @media screen and (max-width: 768px) {
   .nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1em;
+    flex-wrap: nowrap;
   }
 
   .nav-links {
     flex-direction: column;
     width: 100%;
-    margin-top: 1em;
+    background-color: #00296b;
+    position: absolute;
+    top: 100px; /* height of navbar */
+    left: 0;
+    padding-top: 1em;
+    z-index: 9999;
+    box-sizing: border-box;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.1s ease-in, opacity 0.4s ease-out;
   }
 
-  .nav a {
-    padding: 0.5rem;
-    width: 100%;
-  }
-
-.material-symbols-outlined {
-  align-self: flex-start; /* aligns the icon to start of cross-axis */
-  margin-left: 0;        /* remove any left margin */
-  margin-right: auto;    /* push icon fully to left */
-  cursor: pointer;
-  transition: all 0.3 ease;
-}
-
-}
-
-/* ✅ REMOVED broken width overrides */
-@media screen and (max-width: 478px) {
-  .nav {
-    /* Removed width: 170% to prevent overflow */
-    padding: 1em;
-  }
-
-  .nav-links {
-    width: 100%;
+  .nav-links.active {
+    max-height: 500px; 
+    opacity: 1;
   }
 
   .nav a {
     width: 100%;
+    padding: 0.75rem 1rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-actions {
+    margin-left: auto;
   }
 }
-

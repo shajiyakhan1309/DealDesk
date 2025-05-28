@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [iconText, setIconText] = useState("dark_mode");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     document.body.style.backgroundColor = "white";
@@ -23,21 +24,37 @@ const Navbar = () => {
     setIsDarkMode(!isDarkMode);
   };
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className="nav">
       <h1>DealDesk</h1>
-
-      <div className="nav-links">
-        <NavLink className={(e) => (e.isActive ? "orange" : "")} to="/">Home</NavLink>
-        <NavLink className={(e) => (e.isActive ? "orange" : "")} to="/contact">Contact</NavLink>
-        <NavLink className={(e) => (e.isActive ? "orange" : "")} to="/aboutUs">About Us</NavLink>
-      <span className="material-symbols-outlined" onClick={toggleDarkMode}>
-        {iconText}
-      </span>
+  
+      {/* Nav Links */}
+      <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+        <NavLink onClick={() => setMenuOpen(false)} className={(e) => (e.isActive ? "orange" : "")} to="/">Home</NavLink>
+        <NavLink onClick={() => setMenuOpen(false)} className={(e) => (e.isActive ? "orange" : "")} to="/contact">Contact</NavLink>
+        <NavLink onClick={() => setMenuOpen(false)} className={(e) => (e.isActive ? "orange" : "")} to="/aboutUs">About Us</NavLink>
       </div>
-
+  
+      {/* Hamburger and toggle at the end */}
+      <div className="nav-actions">
+        <span className="material-symbols-outlined" onClick={toggleDarkMode}>
+          {iconText}
+        </span>
+        <div className="hamburger" onClick={toggleMenu}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+      </div>
     </div>
   );
+  
+  
+  
 };
 
 export default Navbar;
