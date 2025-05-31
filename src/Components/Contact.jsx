@@ -35,7 +35,6 @@ const ContactSection = () => {
       console.error("Error submitting form:", err);
     }
     await delay(2);
-    console.log(data)
   };
 
  
